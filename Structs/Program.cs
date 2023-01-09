@@ -63,8 +63,6 @@ namespace Structs
             Console.WriteLine();
             Console.WriteLine("Press Any Button To Close");
             Console.ReadKey(true);
-            Console.ReadKey(true);
-            Console.ReadKey(true);
         }
     }
 }
