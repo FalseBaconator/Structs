@@ -16,24 +16,22 @@ namespace Structs
             public int Strength;
             public int Dexterity;
             public int Intelligence;
+
+            public void Print()
+            {
+                Console.WriteLine();
+                Console.WriteLine("Name: " + Name);
+                Console.WriteLine("Health: " + Health);
+                Console.WriteLine("Strength: " + Strength);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
+                Console.WriteLine();
+            }
         }
 
         static Person Rogue;
         static Person Fighter;
-        static Person Mage;
-
-        static void PrintPerson(Person p)
-        {
-            Console.WriteLine();
-            Console.WriteLine("Name: " + p.Name);
-            Console.WriteLine("Health: " + p.Health);
-            Console.WriteLine("Strength: " + p.Strength);
-            Console.WriteLine("Dexterity: " + p.Dexterity);
-            Console.WriteLine("Intelligence: " + p.Intelligence);
-            Console.WriteLine();
-        }
-
-        
+        static Person Mage;        
 
         static void Main(string[] args)
         {
@@ -57,11 +55,12 @@ namespace Structs
 
             Console.WriteLine("Structs");
             Console.WriteLine();
-            PrintPerson(Rogue);
-            PrintPerson(Fighter);
-            PrintPerson(Mage);
+            Rogue.Print();
+            Fighter.Print();
+            Mage.Print();
             Console.WriteLine();
             Console.WriteLine("Press Any Button To Close");
+            Console.ReadKey(true);
             Console.ReadKey(true);
         }
     }
