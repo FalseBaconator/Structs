@@ -27,6 +27,23 @@ namespace Structs
                 Console.WriteLine("Intelligence: " + Intelligence);
                 Console.WriteLine();
             }
+
+            public void Damage(int DMG)
+            {
+                Health -= DMG;
+                Console.WriteLine();
+                Console.WriteLine(Name + " Took " + DMG + " Damage!");
+                Console.WriteLine();
+            }
+
+            public void Heal(int HP)
+            {
+                Health += HP;
+                Console.WriteLine();
+                Console.WriteLine(Name + " Healed By " + HP + " Points!");
+                Console.WriteLine();
+            }
+
         }
 
         static Person Rogue;
@@ -59,6 +76,12 @@ namespace Structs
             Fighter.Print();
             Mage.Print();
             Console.WriteLine();
+            Console.WriteLine("Hurting The Rogue");
+            Rogue.Damage(2);
+            Rogue.Print();
+            Console.WriteLine("Healing The Rogue");
+            Rogue.Heal(2);
+            Rogue.Print();
             Console.WriteLine("Press Any Button To Close");
             Console.ReadKey(true);
         }
